@@ -41,5 +41,7 @@ module MartianLibrary
       g.helper          false
       g.channel         assets: false
     end
+
+    ArLazyPreload.config.auto_preload = true
   end
 end
