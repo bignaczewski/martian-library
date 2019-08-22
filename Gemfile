@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '~> 5.0'
   gem 'rspec-rails'
 end
 
@@ -48,4 +49,4 @@ gem 'graphql', '~> 1.9'
 
 gem 'graphiql-rails', group: :development
 
-gem "factory_bot_rails", "~> 5.0", :groups => [:development, :test]
+gem 'ar_lazy_preload'
