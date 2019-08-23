@@ -19,12 +19,13 @@ export const createCache = () => {
 const getToken = () =>
     document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 const token = getToken();
-const setTokenForOperation = async operation =>
-    operation.setContext({
+const setTokenForOperation = async operation => {
+    return operation.setContext({
         headers: {
-            'X-CSRF-Token': token,
+            ...getTokens(),
         },
     });
+};
 // link with token
 const createLinkWithToken = () =>
     new ApolloLink(
@@ -80,3 +81,14 @@ export const createClient = (cache, requestLink) => {
         cache,
     });
 };
+
+const getTokens = () => {
+    const tokens = {
+        "X-CSRF-Token": document
+            .querySelector('meta[name="csrf-token"]')
+            .getAttribute("content")
+    };
+    const authToken = localStorage.getItem("mlToken");
+    return authToken ? { ...tokens, Authorization: authToken } : tokens;
+};
+
