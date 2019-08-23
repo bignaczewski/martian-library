@@ -47,3 +47,6 @@ Lint/ShadowingOuterLocalVariable:
 # Check with yard instead.
 Style/Documentation:
   Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false

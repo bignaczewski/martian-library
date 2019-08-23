@@ -4,4 +4,9 @@ This is a project based on the following tutorial https://evilmartians.com/chron
 
 It contains Ruby on Rails back-end, GrapqQL and React/Apollo front-end.
 
-On top of the project created while following the tutorial I added rubocop, foreman and lazy preloading (to solve the N+1 db problem).
+On top of the project created while following the tutorial I added: 
+* rubocop
+* foreman
+* lazy preloading (to solve the N+1 db problem)
+* more specs 
+
