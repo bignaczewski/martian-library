@@ -11,7 +11,7 @@ module Types
       Item.all
     end
 
-    field :me, Types::UserType, null: true
+    field :me, Types::UserType, null: true, description: 'Returns the current user'
     def me
       context[:current_user]
     end
