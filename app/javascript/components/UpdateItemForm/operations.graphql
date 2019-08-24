@@ -17,8 +17,8 @@ mutation UpdateItemMutation(
         item {
             ...itemFragment
         }
-    }
-    errors {
-        fullMessages
+        errors {
+            fullMessages
+        }
     }
 }
