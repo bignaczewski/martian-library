@@ -1,9 +1,8 @@
+#import '../../fragments/Item.graphql'
+
 query LibraryQuery {
     items {
-        id
-        title
-        imageUrl
-        description
+        ...itemFragment
         user {
             id
             email
