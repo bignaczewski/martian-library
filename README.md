@@ -10,3 +10,4 @@ On top of the project created while following the tutorial I added:
 * lazy preloading (to solve the N+1 db problem)
 * more specs 
 
+Due to the wrong email address set in the git config I had to rewrite the whole history of the project to change it.
