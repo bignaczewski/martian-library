@@ -13,7 +13,8 @@ module Mutations
 
       item = Item.find(id)
 
-      if item.update(attributes.to_h.merge(user: context[:current_user]))
+      if item.update(attributes.to_h)
+        # MartianLibrarySchema.subscriptions.trigger('itemUpdated', {}, item)
         { item: item }
       else
         { errors: item.errors }
